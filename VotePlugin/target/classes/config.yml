@@ -1,0 +1,31 @@
+cooldown-time: 30  # 冷却时间（秒）
+vote-duration: 30   # 投票持续时间（秒）
+# 声音配置（支持所有有效的Minecraft音效名称）
+vote-sound:
+  sound: "BLOCK_NOTE_BLOCK_PLING"  # 1.21+ 使用 "NOTE_BLOCK_PLING"
+  volume: 1.0                      # 音量范围 0.0-1.0
+  pitch: 1.5                       # 音高调整（0.5-2.0）
+vote-types:
+  天气切换: # 投票类型名称（使用中文）
+    command: "weather clear"
+    pass-percent: 40.0
+    permission: vote.weather
+    description: "将天气改为晴天"
+  重置副本:
+    command: "console:reload confirm"
+    pass-percent: 60.0
+    permission: vote.reload
+    description: "重新加载服务器配置"
+  清理掉落物:
+    command: "minecraft:kill @e[type=item]"
+    pass-percent: 50.0
+    permission: vote.cleandrop
+  时间重置:
+    command: "time set day"
+    pass-percent: 40.0
+    description: "将时间设置为白天"
+
+messages:
+  cooldown: "&c请等待 %d 秒后再发起新的投票"
+  vote-started: "&a新投票已发起！类型：%s 理由：%s"
+  vote-result: "&e投票结果：%d 同意，%d 反对。%s"

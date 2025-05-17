@@ -1,0 +1,4 @@
+name: VotePlugin
+version: 1.0-SNAPSHOT
+main: com.example.votePlugin.VotePlugin
+api-version: 1.21
